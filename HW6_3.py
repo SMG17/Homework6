@@ -12,7 +12,7 @@ LengthPerGene = []
 
 for mRNA in db.features_of_type("mRNA"):
 	if mRNA.chrom == "chrmt":
-		break
+		continue
 	GeneNames.append(mRNA["Name"])
 	count = bamFile.count(mRNA.chrom,mRNA.start,mRNA.stop)
 	ReadCountPerGene.append(count)
